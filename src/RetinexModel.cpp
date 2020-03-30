@@ -1,4 +1,6 @@
 #include "RetinexModel.h"
+#define EIGEN_USE_MKL_ALL
+#define EIGEN_VECTORIZE_SSE4_2
 
 RetinexModel::RetinexModel(const Parameters& param )
 {

@@ -2,7 +2,7 @@
   
 void powMat(cv::Mat& src, cv::Mat& dst, float order)
 {
-  int nc = src.cols * src.rows;
+ 	int nc = src.cols * src.rows;
 	dst.create(src.size(), CV_32F);
 	float *src_pixel = (float*)src.data;
 	float *dst_pixel = (float*)dst.data;
@@ -13,7 +13,7 @@ void powMat(cv::Mat& src, cv::Mat& dst, float order)
 }
 int main()
 {
-  const cv::Mat I1 = cv::imread("src.bmp",1);//MPI-Sintel/000008_10.png
+  	const cv::Mat I1 = cv::imread("src.bmp",1);//MPI-Sintel/000008_10.png
 	if (I1.empty())
 	{
 		std::cerr << "imread failed." << std::endl;
@@ -51,5 +51,5 @@ int main()
 	cv::cvtColor(reflectance, reflectance, CV_HSV2BGR);
 	cv::imwrite("reflectance.bmp", reflectance);
   
-  return 0;
+  	return 0;
 }
